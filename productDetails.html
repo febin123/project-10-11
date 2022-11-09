@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeerBiceps</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- linked css file  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!---jquery cdn link-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-dumbbell"></i>BeerBiceps</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+ 
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#sales">Sales</a>
+        <a href="#" class="search-mob"> <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button></a>
+    </nav>
+   
+    
+        <form action="#">
+         <input type="search" id="search-data" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+             
+        </form>
+    </a>
+</header>
+
+<!----start of sales section-->
+<section id="sales">
+    <h1 class="heading"><span>Product Deatils</span></h1>
+
+    <div class="box-container">
+    </div>
+
+</section>
+
+<!----end of sales section-->
+
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(()=>{
+        var search = document.location.search;
+        $.getJSON('./product.json', (data)=>{
+            data.forEach((course)=>{
+                if(search.indexOf(course.id) != -1){
+            
+            var courseEl = '<div class="box">'+
+            '<span class="price">'+ course.price + '</span>'+
+                '<img src="' + course.img + '">'+
+                '<h3>' + course.name + '</h3>'+
+                '   <div class="stars">'+
+                '<i class="fa fa-star"></i>'+
+                '<i class="fa fa-star"></i>'+
+                '<i class="fa fa-star"></i>'+
+                '<i class="fa fa-star"></i>'+
+                '<i class="fa-solid fa-star-half-stroke"></i>'+
+                
+            '</div>'+
+                 '<a href="productDetails.html?id='+course.id+'" class="btn">'+course.view+ '</a>'
+      
+            '</div>';
+            $('.box-container').append(courseEl);
+    
+                }
+            });
+        });
+
+    })
+</script>
+
+<!---linked js file-->
+<!-- <script src="app.js"></script> -->
+</body>
+</html>

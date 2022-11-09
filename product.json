@@ -1,0 +1,55 @@
+[
+    {
+        "id":"1",
+        "price":"-20%",
+        "img":"Images/sale1.png",
+        "name":"protein bar",
+        "buy":"buy-now",
+        "view":"View"                    
+        
+    },
+    {
+        "id":"2",
+        "price":"-20%",
+        "img":"Images/sale2.png",
+        "name":"protein bar",
+        "buy":"buy-now",
+        "view":"View"
+        
+    },
+    {
+        "id":"3",
+        "price":"-20%",
+        "img":"Images/sale3.jpeg",
+        "name":"protein powder",
+        "buy":"buy-now",
+        "view":"View"
+        
+    },
+    {
+        "id":"4",
+        "price":"-20%",
+        "img":"Images/popular1.png",
+        "name":"skipping",
+        "buy":"buy-now",
+        "view":"View"
+      
+    },
+    {
+        "id":"5",
+        "price":"-20%",
+        "img":"Images/popular2.png",
+        "name":"protein bar",
+        "buy":"buy-now",
+        "view":"View"
+    },
+    {
+        "id":"6",
+        "price":"-20%",
+        "img":"Images/popular3.png",
+        "name":"protein bar",
+        "buy":"buy-now",
+        "view":"View"
+    }
+
+]
