@@ -1,7 +1,7 @@
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let productList=document.querySelector('.box-container');
-
+let buy=document.querySelector('.btn');
 const searchbox=document.getElementById("search-data")
 
 // start of navbar button
@@ -11,7 +11,9 @@ menu.onclick = () =>{
   navbar.classList.toggle('active');
 
 }
-
+buy.addEventListener('click',function(){
+  alert('booked');
+})
 window.onscroll = () =>{
 
   menu.classList.remove('fa-times');
@@ -73,7 +75,7 @@ $(document).ready(()=>{
                 
             '</div>'+
                  '<a href="productDetails.html?id='+course.id+'" class="btn">'+course.view+ '</a>'+
-                 '<a href="#" class="btn">'+course.buy+ '</a>'
+                 '<a href="register.html" class="btn">'+course.buy+ '</a>'
             '</div>';
             $('.box-container').append(courseEl);
         });
