@@ -1,7 +1,6 @@
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let productList=document.querySelector('.box-container');
-let buy=document.querySelector('.btn');
 const searchbox=document.getElementById("search-data")
 
 // start of navbar button
@@ -11,9 +10,7 @@ menu.onclick = () =>{
   navbar.classList.toggle('active');
 
 }
-buy.addEventListener('click',function(){
-  alert('booked');
-})
+
 window.onscroll = () =>{
 
   menu.classList.remove('fa-times');
@@ -63,15 +60,15 @@ $(document).ready(()=>{
     $.getJSON('product.json', (data)=>{
         data.forEach((course)=>{
             var courseEl = '<div class="box">'+
-            '<span class="price">'+ course.price + '</span>'+
+            '<span class="price">'+ course.sale + '</span>'+
                 '<img src="' + course.img + '">'+
                 '<h3>' + course.name + '</h3>'+
                 '   <div class="stars">'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa-solid fa-star-half-stroke"></i>'+
+                '<i class="' + course.rating1    + '"></i>'+
+                '<i class="' + course.rating2    + '"></i>'+
+                '<i class="' + course.rating3    + '"></i>'+
+                '<i class="' + course.rating4    + '"></i>'+
+                '<i class="' + course.rating5 + '"></i>'+
                 
             '</div>'+
                  '<a href="productDetails.html?id='+course.id+'" class="btn">'+course.view+ '</a>'+

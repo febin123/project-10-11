@@ -1,55 +1,91 @@
 [
     {
         "id":"1",
-        "price":"-20%",
+        "sale":"-15%",
+        "price":"€2",
         "img":"Images/sale1.png",
-        "name":"protein bar",
-        "buy":"buy-now",
-        "view":"View"                    
+        "name":"Protein Bar(Peanut)",
+        "buy":"Buy-Now",
+        "view":"View",
+        "rating1":"fa fa-star",                    
+        "rating2":"fa fa-star",                    
+        "rating3":"fa fa-star",                    
+        "rating4":"fa fa-star",                    
+        "rating5":"fa-solid fa-star-half-stroke"                    
         
     },
     {
         "id":"2",
-        "price":"-20%",
+        "sale":"-5%",
+        "price":"€2.5",
         "img":"Images/sale2.png",
-        "name":"protein bar",
-        "buy":"buy-now",
-        "view":"View"
+        "name":"Protein Bar(Orange)",
+        "buy":"Buy-Now",
+        "view":"View",
+        "rating1":"fa fa-star",                    
+        "rating2":"fa fa-star",                    
+        "rating3":"fa fa-star",                    
+        "rating4":"fa fa-star",                    
+        "rating5":"" 
         
     },
     {
         "id":"3",
-        "price":"-20%",
+        "sale":"-20%",
+        "price":"€12",
         "img":"Images/sale3.jpeg",
-        "name":"protein powder",
-        "buy":"buy-now",
-        "view":"View"
+        "name":"Protein Powder",
+        "buy":"Buy-Now",
+        "view":"View",
+        "rating1":"fa fa-star",                    
+        "rating2":"fa fa-star",                    
+        "rating3":"fa fa-star",                    
+        "rating4":"fa fa-star",                    
+        "rating5":"fa fa-star" 
         
     },
     {
         "id":"4",
-        "price":"-20%",
+        "sale":"-10%",
+        "price":"€15",
         "img":"Images/popular1.png",
-        "name":"skipping",
-        "buy":"buy-now",
-        "view":"View"
+        "name":"Skipping Rope",
+        "buy":"Buy-Now",
+        "view":"View",
+        "rating1":"fa fa-star",                    
+        "rating2":"fa fa-star",                    
+        "rating3":"fa fa-star",                    
+        "rating4":"fa fa-star",                    
+        "rating5":"fa-solid fa-star-half-stroke" 
       
     },
     {
         "id":"5",
-        "price":"-20%",
+        "sale":"-25%",
+        "price":"€10",
         "img":"Images/popular2.png",
-        "name":"protein bar",
-        "buy":"buy-now",
-        "view":"View"
+        "name":"Back Gripper",
+        "buy":"Buy-Now",
+        "view":"View",
+        "rating1":"fa fa-star",                    
+        "rating2":"fa fa-star",                    
+        "rating3":"fa fa-star",                    
+        "rating4":"fa fa-star",                    
+        "rating5":"fa fa-star" 
     },
     {
         "id":"6",
-        "price":"-20%",
+        "sale":"-5%",
+        "price":"€20",
         "img":"Images/popular3.png",
-        "name":"protein bar",
-        "buy":"buy-now",
-        "view":"View"
+        "name":"Yoga Mat",
+        "buy":"Buy-Now",
+        "view":"View",
+        "rating1":"fa fa-star",                    
+        "rating2":"fa fa-star",                    
+        "rating3":"fa fa-star",                    
+        "rating4":"fa fa-star",                    
+        "rating5":"fa-solid fa-star-half-stroke" 
     }
 
 ]

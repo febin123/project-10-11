@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeerBiceps</title>
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <title>BeerBiceps - Product Details</title>
+    <link rel="stylesheet" href="styles/product.css">
+     <!-- font awesome cdn link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- linked css file  -->
-    <link rel="stylesheet" href="styles/style.css">
+
 
     <!---jquery cdn link-->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -17,38 +18,15 @@
 
 </head>
 <body>
-    <!-- header section starts  -->
-
-<header>
-
-    <a href="#" class="logo"><i class="fas fa-dumbbell"></i>BeerBiceps</a>
-
-    <div id="menu-bar" class="fas fa-bars"></div>
- 
-    <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#sales">Sales</a>
-        <a href="#" class="search-mob"> <input type="search" class="search-data" placeholder="Search" required>
-            <button type="submit" class="fas fa-search"></button></a>
-    </nav>
-   
-    
-        <form action="#">
-         <input type="search" id="search-data" class="search-data" placeholder="Search" required>
-            <button type="submit" class="fas fa-search"></button>
-             
-        </form>
-    </a>
-</header>
-
 <!----start of sales section-->
-<section id="sales">
-    <h1 class="heading"><span>Product Deatils</span></h1>
-
-    <div class="box-container">
+<div class="small-container single-product">
+    <div class="row">
+        
+    
     </div>
 
-</section>
+        </div>
+
 
 <!----end of sales section-->
 
@@ -61,21 +39,44 @@
             data.forEach((course)=>{
                 if(search.indexOf(course.id) != -1){
             
-            var courseEl = '<div class="box">'+
-            '<span class="price">'+ course.price + '</span>'+
-                '<img src="' + course.img + '">'+
-                '<h3>' + course.name + '</h3>'+
-                '   <div class="stars">'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa fa-star"></i>'+
-                '<i class="fa-solid fa-star-half-stroke"></i>'+
+            var courseEl = '<div class="col-2">'+
+                '<img src="' + course.img + '" id="ProductImg" width="100%">'+
+                '<div class="small-img-row">'+
+                 '<video width="100%" autoplay>'+
+                    '<source src="/Videos/proteinBar.mp4" type="video/mp4">'+
+                    '</video>'+
+                     '</div>'+
+                    '</div>'+
+                    '<div class="col-2">'+
+                        '<p> <a href="index.html">Home/Sale</a> </p>'+
+                        '<h1>'+ course.name + '</h1>'+
+                        '<h4>'+ course.price + '</h4>'+
+                        '   <div class="stars">'+
+                            '<i class="' + course.rating1    + '"></i>'+
+                                '<i class="' + course.rating2    + '"></i>'+
+                                '<i class="' + course.rating3    + '"></i>'+
+                                '<i class="' + course.rating4    + '"></i>'+
+                                '<i class="' + course.rating5 + '"></i>'+
+                            '</div>'+
+                        '<input type="number" value="1" min="1" max="10">'+
+                        '<a href="register.html" class="btn">' + course.buy + '</a>'+
+                        '<h3>Product Details </h3>'+
+                        '<br>'+
+                        '<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id maxime ipsa iusto? Consectetur natus earum iste consequuntur sed accusantium minus, aut fugit quae nisi omnis iure pariatur exercitationem laborum! Eveniet vel nemo nobis aperiam veritatis ratione ducimus, qui minima tempore iusto tenetur saepe, hic facere consectetur dolorum praesentium aspernatur quis.</p>'+
+                        '</div>'
+
+            
+                
                 
             '</div>'
+
+
+
+
+
       
         
-            $('.box-container').append(courseEl);
+            $('.row').append(courseEl);
     
                 }
             });
